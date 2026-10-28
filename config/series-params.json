@@ -1,0 +1,405 @@
+{
+  "schemaVersion": 1,
+  "configVersion": "2.8.0",
+  "updatedAt": "2026-10-28",
+  "parameterAuthority": "Series-wide numeric and color source of truth; episode-specific cuts and approvals live in each episode manifest.",
+  "render": {
+    "canvasWidthPx": 1080,
+    "canvasHeightPx": 1920,
+    "fps": 30,
+    "sampleAspectRatio": "1:1",
+    "videoCodec": "h264",
+    "pixelFormat": "yuv420p",
+    "videoCrfTarget": 16,
+    "videoCrfMaximum": 18,
+    "encoderPreset": "medium",
+    "audioCodec": "aac",
+    "audioSampleRateHz": 44100,
+    "audioChannels": 2,
+    "audioBitrateBps": 192000
+  },
+  "selection": {
+    "preferredDurationSeconds": [
+      20.0,
+      30.0
+    ],
+    "durationIsHardLimit": false,
+    "requirePersonOnFirstAndLastFrame": true,
+    "allowOriginalTransitionsInside": true
+  },
+  "subtitle": {
+    "background": {
+      "colorHex": "#202020",
+      "opacity": 0.5,
+      "qaOpacityRange": [
+        0.45,
+        0.55
+      ],
+      "appliesTo": [
+        "chinese",
+        "english",
+        "vlogWatermark"
+      ],
+      "assBorderStyle": 1,
+      "preventBackgroundOverlap": true,
+      "minimumClearanceFromVideoPx": 12,
+      "chineseEnglishBoxesMustNotOverlap": true,
+      "boxRenderMode": "singleVectorRectanglePerCue"
+    },
+    "text": {
+      "defaultColorHex": "#FFFFFF",
+      "highlightColorHex": "#FFE16B",
+      "chineseFont": "Microsoft YaHei",
+      "englishFont": "Arial",
+      "chineseFontSizePx": 36,
+      "englishFontSizePx": 41,
+      "horizontalScalePercent": 100,
+      "maximumLineWidthPx": 1000,
+      "longLinePolicy": "splitIntoSequentialSingleLineCues",
+      "highlightTargets": [
+        "englishKnowledgeSpan",
+        "chineseEquivalentSpan"
+      ],
+      "chineseHighlightScope": "matchingMeaningSpanOnly"
+    },
+    "boxes": {
+      "chinesePaddingPx": 10,
+      "englishPaddingPx": 10
+    },
+    "mainVideo": {
+      "xPx": 0,
+      "yPx": 520,
+      "widthPx": 1080,
+      "heightPx": 608
+    },
+    "placement": {
+      "chineseBaselineOffsetFromMainTopPx": -28,
+      "englishBaselineInsetFromMainBottomPx": 24
+    },
+    "qaSamples": [
+      "shortSentence",
+      "longSentence",
+      "highlightSentence"
+    ]
+  },
+  "cardLayout": {
+    "status": "seriesReference; adapt only with recorded episode exception",
+    "topVideoRectPx": [
+      60,
+      230,
+      1020,
+      770
+    ],
+    "contentHorizontalBoundsPx": [
+      85,
+      920
+    ],
+    "textLeftPx": 115,
+    "dividerYPx": 1000,
+    "usageCardYRangePx": [
+      1045,
+      1325
+    ],
+    "exampleCardYRangePx": [
+      1370,
+      1660
+    ],
+    "dividerToUsageGapPx": 45,
+    "betweenCardsGapPx": 45,
+    "fontSizesPx": {
+      "expression": 60,
+      "meaningChinese": 42,
+      "usageBody": 35,
+      "exampleEnglish": 41,
+      "exampleChinese": 34
+    },
+    "palette": {
+      "backgroundColorHex": "#0E171E",
+      "usagePanelColorHex": "#1C2A35",
+      "examplePanelColorHex": "#243946",
+      "dividerColorHex": "#FFE16B",
+      "bodyTextColorHex": "#FFFFFF",
+      "secondaryTextColorHex": "#DDE0E4"
+    },
+    "topVideoBorder": {
+      "enabled": false,
+      "widthPx": 0
+    },
+    "replayTag": {
+      "placement": "topRightInsideVideo",
+      "rightInsetPx": 15,
+      "topInsetPx": 18,
+      "fontSizePx": 27,
+      "backgroundColorHex": "#202020",
+      "backgroundOpacity": 0.8,
+      "textColorHex": "#FFE16B"
+    },
+    "staticTailFramePolicy": {
+      "source": "lastFrameOfSlowReplay",
+      "selection": "bestNaturalClearFaceFrameWithinReplayWindow",
+      "eyesMustBeOpenWhenVisible": true,
+      "humanReviewRequired": true,
+      "subtitleAndWatermarkMustMatchReplay": true,
+      "pixelMatchMaxMae": 2.5,
+      "transitionToStaticSeconds": 0.2,
+      "tailHoldSeconds": 0.24,
+      "replayTagFadeOutSeconds": 0.16,
+      "replayTagFadeStartOffsetFromHoldSeconds": 0.04,
+      "replayTagMustBeAbsentFromStaticCard": true
+    },
+    "typography": {
+      "episodeLabelFontSizePx": 32,
+      "episodeLabelYPx": 795,
+      "usageTitleYPx": 1065,
+      "usageBodyYPx": 1116,
+      "exampleTitleYPx": 1390,
+      "exampleBodyYPx": 1438,
+      "sectionTitleFontSizePx": 33,
+      "usageLineSpacingPx": 47,
+      "englishExampleLineSpacingPx": 47,
+      "chineseExampleLineSpacingPx": 41,
+      "exampleTranslationTopGapPx": 8,
+      "expressionFallbackFontSizePx": 53,
+      "episodeToExpressionVisibleGapPx": 23,
+      "expressionToMeaningVisibleGapPx": 23,
+      "meaningToDividerMinGapPx": 20,
+      "visibleGapEqualityTolerancePx": 2,
+      "visibleGapTargetTolerancePx": 3,
+      "usageNonFinalLineMinFillRatio": 0.58
+    },
+    "panelCornerRadiusPx": 24,
+    "bodyRightPaddingPx": 20,
+    "topSubtitle": {
+      "bottomInsetPx": 63,
+      "boxTopInsetPx": 5,
+      "boxBottomOffsetPx": 54,
+      "horizontalPaddingPx": 10,
+      "cornerRadiusPx": 3
+    },
+    "replayCaption": {
+      "fontSizePx": 41,
+      "baselineYPx": 707,
+      "boxTopYPx": 702,
+      "boxBottomYPx": 761,
+      "horizontalPaddingPx": 10,
+      "backgroundColorHex": "#202020",
+      "backgroundOpacity": 0.5
+    }
+  },
+  "cutting": {
+    "requireCompleteLastAudiblePhoneme": true,
+    "preferredNaturalTailSeconds": [
+      0.15,
+      0.3
+    ],
+    "reviewFinalSeconds": 1.0,
+    "asrTimestampsAreLocatorsOnly": true,
+    "checkScopes": [
+      "selectedClip",
+      "normalSpeedReplay",
+      "slowSpeedReplay"
+    ],
+    "slowReplaySpeed": 0.7,
+    "onNoNaturalPause": "extend_or_reselect"
+  },
+  "timing": {
+    "transitionTargetSeconds": 2.0,
+    "transitionToleranceSeconds": 0.15,
+    "transitionClearHoldSeconds": 0.9,
+    "staticFrameHoldSeconds": 0.3,
+    "staticFrameHoldToleranceSeconds": 0.03,
+    "cardLeadInSeconds": 0.35,
+    "cardLeadInToleranceSeconds": 0.05,
+    "cardTailAfterNarrationSeconds": 0.5,
+    "cardTailToleranceSeconds": 0.1,
+    "rabbitWidthFraction": 0.32
+  },
+  "summaryCard": {
+    "widthPx": 1080,
+    "heightPx": 1920,
+    "sourceFrameCountRange": [
+      2,
+      3
+    ],
+    "referenceLayout": {
+      "reference": "episode-58-summary-card-user-reference-2026-10-28",
+      "backgroundBlurRadiusPx": 13,
+      "backgroundTintRgba": [
+        6,
+        14,
+        23,
+        85
+      ],
+      "episodePositionPx": [
+        72,
+        70
+      ],
+      "episodeFontSizePx": 36,
+      "titlePositionPx": [
+        72,
+        135
+      ],
+      "titleFontSizePx": 72,
+      "boardRectPx": [
+        50,
+        322,
+        1030,
+        1742
+      ],
+      "boardCornerRadiusPx": 33,
+      "boardFillRgba": [
+        9,
+        18,
+        26,
+        216
+      ],
+      "entryXPx": 100,
+      "entryRightPaddingPx": 70,
+      "entryFirstYPx": 420,
+      "entryStepYPx": 435,
+      "englishFontSizePx": 52,
+      "chineseFontSizePx": 39,
+      "usageFontSizePx": 32,
+      "chineseOffsetYPx": 76,
+      "usageOffsetYPx": 142,
+      "whiteHex": "#FFFFFF",
+      "yellowHex": "#FFE16B",
+      "mutedHex": "#D8DDDF",
+      "bottomWatermarkText": "@兔莫英语学习笔记",
+      "bottomWatermarkFontSizePx": 30,
+      "bottomWatermarkYPx": 1830,
+      "singleBoardNoEntryBoxes": true,
+      "titleOutsideBoard": true,
+      "bottomWatermarkStyle": "plainText",
+      "entryBottomPaddingPx": 232
+    }
+  },
+  "qa": {
+    "metadataDurationToleranceSeconds": 0.08,
+    "checkRenderedOpacityRequiresBaseline": true,
+    "replaySourceMatchMaxPixelMae": 35.0,
+    "replaySourceSampleSeconds": 0.8,
+    "replaySourceCropInsetsPx": [
+      100,
+      110,
+      110,
+      150
+    ]
+  },
+  "watermark": {
+    "assetRelativePath": "assets/兔莫英语学习笔记_固定水印_v1.png",
+    "sha256": "DE3B25D0428F95A1C51830DDA0F80376C129D093A166CDFA03C336A30619D3AC",
+    "widthPx": 264,
+    "heightPx": 46,
+    "insetFromVlogVideoXPx": 18,
+    "insetFromVlogVideoYPx": 20,
+    "sourceText": "@兔莫英语学习笔记",
+    "appliesTo": [
+      "bilingualMain",
+      "blindMain",
+      "replayTop",
+      "cardTop"
+    ],
+    "assetBuild": {
+      "font": "Microsoft YaHei",
+      "fontSizePx": 27,
+      "horizontalPaddingPx": 10,
+      "verticalPaddingPx": 9,
+      "cornerRadiusPx": 8,
+      "backgroundFromSubtitleConfig": true
+    },
+    "transitionPolicy": "noOverlayDuringTransition"
+  },
+  "workflow": {
+    "orderedStages": [
+      "bilingualOriginal",
+      "noteTransition",
+      "knowledgeReplayAndExplanation",
+      "blindTransition",
+      "blindOriginal"
+    ],
+    "knowledgePointStages": [
+      "normalSpeedReplay",
+      "slowSpeedReplay",
+      "slowReplayEndFrameHold",
+      "staticCardNarration"
+    ],
+    "replayAndNarrationShareFullCard": true,
+    "replaySource": "selectedClipOfCurrentEpisode",
+    "transitionTitles": {
+      "note": [
+        "{count}个日常表达",
+        "做笔记了喔！"
+      ],
+      "blind": [
+        "去掉字幕",
+        "盲听看看能听懂多少"
+      ]
+    }
+  },
+  "episodeLabel": {
+    "prefix": "全英VLOG·",
+    "format": "{prefix}第{episode}期",
+    "appliesTo": [
+      "knowledgeCard",
+      "timeline",
+      "summaryCard"
+    ]
+  },
+  "transitionLayout": {
+    "rabbitSizePx": [
+      346,
+      415
+    ],
+    "rabbitPositionPx": [
+      367,
+      492
+    ],
+    "titleYPx": 971,
+    "subtitleYPx": 1082,
+    "dividerLinePx": [
+      385,
+      1065,
+      695,
+      1065
+    ],
+    "titleFontSizePx": 58,
+    "subtitleFontSizePx": 36,
+    "backgroundBlurRadiusPx": 30,
+    "backgroundTintAlpha": 135,
+    "entryBlurSeconds": 0.28,
+    "exitStartSeconds": 1.7,
+    "exitDurationSeconds": 0.27,
+    "elementFadeSeconds": 0.35,
+    "rabbitLiftPx": 12,
+    "textLiftPx": 8,
+    "backgroundSources": {
+      "note": "selectedClipEndFrame",
+      "blind": "lastKnowledgeCardFrame"
+    },
+    "effectOrder": [
+      "blurAndDarkenBackground",
+      "fadeInRabbitAndTextWithLift",
+      "clearHold",
+      "fadeOutElements",
+      "restoreNextScene"
+    ],
+    "soundEffectPlayback": "completeOncePerTransition",
+    "visibleGapPx": 24,
+    "visibleGapTolerancePx": 2
+  },
+  "transitionAssets": {
+    "noteRabbitGif": {
+      "assetRelativePath": "assets/兔莫_做笔记动画.gif",
+      "sha256": "0095C2B641D792750159E86358ED3D51BA434325D51107555E5DCB0A2B539C82"
+    },
+    "blindRabbitGif": {
+      "assetRelativePath": "assets/兔莫_认真听听力动画.gif",
+      "sha256": "A57A19DCDAD856A37DFB8B32107777A45D9A98A78EDDE03B1ECEAF7EF0E274EE"
+    },
+    "soundEffect": {
+      "assetRelativePath": "assets/minecraft-levelup.ogg",
+      "sha256": "22CC3FE0419FD8D59B74C091CF11AFCD0C60FA20A9186B7F997FC31D5C131CBA"
+    }
+  }
+}

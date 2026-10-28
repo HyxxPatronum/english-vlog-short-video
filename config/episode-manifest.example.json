@@ -1,0 +1,47 @@
+{
+  "episode": 0,
+  "sourceVideoPath": "path/to/current-vlog.mp4",
+  "videoRole": "subtitlePreview",
+  "selectedClip": {
+    "sourceStartSeconds": 0.0,
+    "sourceEndSeconds": 25.0,
+    "tailHoldSeconds": 0.0,
+    "lastAudiblePhonemeEndSeconds": null,
+    "lastPhonemeEndMethod": "human listening plus waveform",
+    "lastPhonemeHumanReviewed": false,
+    "firstAndLastFramePersonHumanReviewed": false,
+    "durationExceptionReason": ""
+  },
+  "subtitleQaSampleSeconds": {
+    "shortSentence": 5.0,
+    "longSentence": 12.0,
+    "highlightSentence": 19.0
+  },
+  "knowledgePoints": [
+    {
+      "id": "01_example",
+      "expression": "example expression",
+      "spokenSentence": "Example spoken sentence",
+      "highlightSpoken": "Example",
+      "replayRelativeStartSeconds": 5.0,
+      "replayRelativeEndSeconds": 6.5,
+      "cardFrameRelativeSeconds": 5.5,
+      "voiceAsset": "episode_voice_01.mp3",
+      "renderedNormalFile": "work/replays/1_normal.mp4",
+      "renderedSlowFile": "work/replays/1_slow.mp4"
+    }
+  ],
+  "summaryCard": {
+    "sourceFrameSeconds": [
+      2.0,
+      12.0
+    ],
+    "points": [
+      {
+        "english": "example expression",
+        "chinese": "自然中文释义",
+        "usage": "一句精简的使用提示。"
+      }
+    ]
+  }
+}
